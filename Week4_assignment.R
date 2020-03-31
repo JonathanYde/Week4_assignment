@@ -27,11 +27,4 @@ best <- function(state, data = "outcome-of-care-measures.csv"){
         min(low)
 }
 best("NY")
-select.list(c("Hospital.30.Day.Death..Mortality..Rates.from.Heart.Attack", "Hospital.30.Day.Death..Mortality..Rates.from.Heart.Failure", "Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia"), graphics = T, title = "Choose between heart attack, heart failure or pneumonia")
 
-min(na.omit(outcome[,11]))
-
-subset(outcome, outcome[,11]==min(na.omit(outcome[,11])))[, "Hospital.Name"]
-test <- subset(outcome, outcome$State == "NY")
-head(test)
-test$State
